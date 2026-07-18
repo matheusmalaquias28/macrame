@@ -21,3 +21,4 @@ As imagens e textos atuais são apenas exemplo (Desafio Cookies Lucrativos) — 
 - `lib/config.ts` — links de checkout
 - `components/` — peças reutilizáveis (carrossel Marquee, CTA com tracking, barra sticky, data de hoje)
 - `app/globals.css` — tokens de cor/fonte e animações
+"# template-lp" 
