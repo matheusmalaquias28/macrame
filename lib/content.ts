@@ -4,7 +4,7 @@
  *
  * Checklist ao clonar o template:
  * 1. Troque `theme.brandColor` (re-tematiza todos os bg-brand/text-brand).
- * 2. Substitua as imagens em /public e ajuste os caminhos/dimensões aqui.
+ * 2. Adicione suas imagens em /public e troque ImagePlaceholder por next/image em app/page.tsx.
  * 3. Revise textos, preços e links de checkout (lib/config.ts).
  * 4. Atualize metadata/favicon em app/layout.tsx, app/icon.png e app/opengraph-image.png.
  * 5. Configure pixels/IDs de tracking em app/layout.tsx.
@@ -20,10 +20,10 @@ export const offerBar = {
 };
 
 export const hero = {
-  logo: { src: "/v2/logo-cookie-lucrativo.png", alt: "Cookies Lucrativos", width: 142, height: 42 },
+  logo: { alt: "Cookies Lucrativos", width: 142, height: 42 },
   titleHighlight: "+R$200 POR DIA ",
   title: "COM COOKIES ARTESANAIS EM CASA",
-  image: { src: "/img/img-hero-cookies-lucrativos.jpg", alt: "Materiais do desafio Cookies Lucrativos para vender cookies artesanais", width: 1100, height: 1100 },
+  image: { alt: "Materiais do desafio Cookies Lucrativos para vender cookies artesanais", width: 1100, height: 1100 },
   subtitle:
     "Você aprenderá a produzir e vender cookies artesanais na sua própria cozinha, conquistando vendas que podem gerar R$200 ou mais por dia, mesmo sem experiência anterior.",
   ctaLabel: "QUERO COMEÇAR AGORA",
@@ -43,10 +43,10 @@ export const materials = {
   title: "VEJA AS RECEITAS QUE VOCÊ VAI RECEBER JÁ!",
   imageSize: { width: 575, height: 863 },
   items: [
-    { src: "/entregaveis/cookie-kitkat.jpg", alt: "Ficha da receita: Cookies KitKat" },
-    { src: "/entregaveis/cookie-nutella.jpg", alt: "Ficha da receita: Cookies Nutella" },
-    { src: "/entregaveis/cookie-oreo.jpg", alt: "Ficha da receita: Cookies Oreo" },
-    { src: "/entregaveis/cookie-ferrero-rocher.jpg", alt: "Ficha da receita: Cookies Ferrero Rocher" },
+    { alt: "Ficha da receita: Cookies KitKat" },
+    { alt: "Ficha da receita: Cookies Nutella" },
+    { alt: "Ficha da receita: Cookies Oreo" },
+    { alt: "Ficha da receita: Cookies Ferrero Rocher" },
   ],
 };
 
@@ -54,13 +54,13 @@ export const testimonials = {
   title: "Veja os depoimentos dos nossos clientes!",
   imageSize: { width: 738, height: 1460 },
   items: [
-    { src: "/img/feedback-1.webp", alt: "Depoimento de aluna no WhatsApp" },
-    { src: "/img/feedback-2.webp", alt: "Depoimento de aluna no WhatsApp" },
-    { src: "/img/feedback-3.webp", alt: "Depoimento de aluna no WhatsApp" },
-    { src: "/img/feedback-4.webp", alt: "Depoimento de aluna no WhatsApp" },
-    { src: "/img/feedback-5.webp", alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
-    { src: "/img/feedback-6.webp", alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
-    { src: "/img/feedback-7.webp", alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
+    { alt: "Depoimento de aluna no WhatsApp" },
+    { alt: "Depoimento de aluna no WhatsApp" },
+    { alt: "Depoimento de aluna no WhatsApp" },
+    { alt: "Depoimento de aluna no WhatsApp" },
+    { alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
+    { alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
+    { alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
   ],
 };
 
@@ -91,7 +91,7 @@ export const offerSection = {
   title: "TUDO O QUE VOCÊ VAI RECEBER",
   pill: "⚡ACESSO IMEDIATO",
   cardTitle: "TUDO FOI ORGANIZADO PARA SER SIMPLES E FÁCIL DE APLICAR.",
-  image: { src: "/img/img-hero-cookies-lucrativos.jpg", alt: "Materiais do desafio Cookies Lucrativos", width: 1100, height: 1100 },
+  image: { alt: "Materiais do desafio Cookies Lucrativos", width: 1100, height: 1100 },
   features: [
     "Precificação: o preço certo para lucrar em cada cookie",
     "Custos e margem: saiba quanto sobra em cada venda",
@@ -108,9 +108,9 @@ export const bonusSection = {
   pill: "🎁 3 BÔNUS EXCLUSIVOS",
   exclusiveNote: ["BÔNUS INCLUSO APENAS", "NO PLANO COMPLETO"],
   items: [
-    { img: "/entregaveis/bonus-instagram.webp", title: "Instagram Magnético para Confeiteiras", desc: "Como atrair clientes pelo Instagram.", price: "R$27" },
-    { img: "/entregaveis/bonus-acoes.webp", title: "20 Ações para Conseguir Clientes", desc: "Ações simples para gerar pedidos.", price: "R$27" },
-    { img: "/entregaveis/bonus-vendas.webp", title: "Comunidade Primeiras Vendas", desc: "Grupo exclusivo para networking e dúvidas.", price: "R$27" },
+    { title: "Instagram Magnético para Confeiteiras", desc: "Como atrair clientes pelo Instagram.", price: "R$27" },
+    { title: "20 Ações para Conseguir Clientes", desc: "Ações simples para gerar pedidos.", price: "R$27" },
+    { title: "Comunidade Primeiras Vendas", desc: "Grupo exclusivo para networking e dúvidas.", price: "R$27" },
   ],
 };
 
@@ -126,7 +126,7 @@ export const plansSection = {
   title: "ESCOLHA A MELHOR OPÇÃO PARA VOCÊ",
   basic: {
     name: "Plano Básico",
-    image: { src: "/entregaveis/plano-basico-cookie.jpg", alt: "Materiais do Plano Básico do desafio Cookies Lucrativos", width: 1104, height: 1104 },
+    image: { alt: "Materiais do Plano Básico do desafio Cookies Lucrativos", width: 1104, height: 1104 },
     receiveLabel: "você recebe:",
     features: [
       "Receitas de Cookies Clássicos",
@@ -144,7 +144,7 @@ export const plansSection = {
     badge: "🔥 ÚLTIMA CHANCE — OFERTA TERMINA HOJE",
     name: "PLANO COMPLETO",
     allBonusesLabel: "TODOS OS BÔNUS INCLUSOS",
-    image: { src: "/img/img-hero-cookies-lucrativos.jpg", alt: "Materiais do desafio Cookies Lucrativos", width: 1100, height: 1100 },
+    image: { alt: "Materiais do desafio Cookies Lucrativos", width: 1100, height: 1100 },
     pill: "⚡3X MAIS CONTEÚDOS",
     features: [
       "Receitas de cookies clássicos e gourmet.",
@@ -171,7 +171,7 @@ export const plansSection = {
 };
 
 export const guarantee = {
-  seal: { src: "/img/guarantee-seal.webp", alt: "Selo de garantia de 7 dias", width: 241, height: 242 },
+  seal: { alt: "Selo de garantia de 7 dias", width: 241, height: 242 },
   title: "Compra 100% Segura e Garantida!",
   intro: "SEU INVESTIMENTO É TOTALMENTE SEGURO",
   lead: "Isso significa que, a qualquer momento, se você achar que:",

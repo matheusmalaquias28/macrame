@@ -7,10 +7,10 @@ As imagens e textos atuais são apenas exemplo (Desafio Cookies Lucrativos) — 
 
 1. Clique em **Use this template** no GitHub (ou clone este repo).
 2. `npm install` e `npm run dev` para rodar localmente.
-3. Edite **`lib/content.ts`** — todo o texto, preços, imagens e a cor da marca (`theme.brandColor`) estão nesse único arquivo.
+3. Edite **`lib/content.ts`** — todo o texto, preços e a cor da marca (`theme.brandColor`) estão nesse único arquivo. As imagens aparecem como placeholders até você adicionar os arquivos em **`public/`** e trocar `ImagePlaceholder` por `next/image`.
 4. Troque os links de checkout em **`lib/config.ts`**.
-5. Substitua as imagens em **`public/`** (hero, planos, bônus, carrosséis, logo) e ajuste os caminhos/dimensões no `content.ts`.
-6. Atualize o SEO em **`app/layout.tsx`** (title/description/OG) e os arquivos **`app/icon.png`** e **`app/opengraph-image.png`** (favicon e imagem social).
+5. Adicione suas imagens em **`public/`** (hero, planos, bônus, carrosséis, logo) e substitua os placeholders nos componentes.
+6. Atualize o SEO em **`app/layout.tsx`** (title/description/OG) e, se quiser, **`app/icon.png`** e **`app/opengraph-image.png`** (favicon e imagem social).
 7. Configure os pixels/tracking em **`app/layout.tsx`** (GTM via `NEXT_PUBLIC_GTM_ID`, Clarity, Utmify — remova o que não usar).
 8. Deploy na Vercel.
 

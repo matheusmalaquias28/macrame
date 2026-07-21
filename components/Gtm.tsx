@@ -30,7 +30,7 @@ export function Gtm() {
     window.dataLayer = window.dataLayer || [];
     if (!GTM_ID) return;
 
-    const events: (keyof WindowEventMap)[] = ["scroll", "pointerdown", "keydown", "touchstart"];
+    const events: (keyof WindowEventMap)[] = ["scroll", "keydown", "touchstart"];
     const onFirstInteraction = () => {
       loadGtm();
       events.forEach((e) => removeEventListener(e, onFirstInteraction));
