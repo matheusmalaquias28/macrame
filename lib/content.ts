@@ -62,7 +62,7 @@ export const materials = {
 };
 
 export const testimonials = {
-  title: "Veja o que nossas clientes estão dizendo!",
+  title: "Veja o que nossas clientes já produziram!",
   imageSize: { width: 800, height: 1000 },
   items: [
     { alt: "Peça de macramê para mesa posta", src: "/fotos-macrame-1.jpg" },
@@ -74,7 +74,7 @@ export const testimonials = {
 };
 
 export const studentProjects = {
-  title: "VEJA OS PROJETOS QUE NOSSOS ALUNO(A)S JÁ FAZERAM",
+  title: "VEJA OS PROJETOS QUE NOSSOS ALUNO(A)S JÁ FIZERAM",
   imageSize: { width: 800, height: 1000 },
   items: [
     {
