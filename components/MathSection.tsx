@@ -78,7 +78,7 @@ export function MathSection() {
           <span className="inline-flex items-center gap-[6px] rounded-full bg-[#f5f5f7] px-[14px] py-[6px] text-[12px] font-bold tracking-[0.08em] text-[var(--color-brand,#6d4aff)]">
             🧮 FAÇA AS CONTAS
           </span>
-          <h2 className="font-display text-[34px] font-semibold leading-[1.05] text-[#111111]">
+          <h2 className="font-display text-[34px] font-semibold leading-[1.16] text-[#111111]">
             Quanto você precisaria vender para fazer uma renda extra?
           </h2>
           <p className="max-w-[340px] text-[16px] leading-relaxed text-[#6b6b6b]">

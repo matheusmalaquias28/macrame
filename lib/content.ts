@@ -16,74 +16,120 @@ export const theme = {
 };
 
 export const offerBar = {
-  text: "OFERTA ESPECIAL DISPONÍVEL SOMENTE HOJE",
+  text: "OFERTA ESPECIAL DISPONÍVEL APENAS HOJE",
+};
+
+const macrameHeroImage = {
+  src: "/macrame-hero.jpeg",
+  alt: "Mockup do pacote Biblioteca Ilustrada de Mesa Posta em Macramê com bônus",
+  width: 1100,
+  height: 1100,
 };
 
 export const hero = {
-  logo: { alt: "Cookies Lucrativos", width: 142, height: 42 },
-  titleHighlight: "+R$200 POR DIA ",
-  title: "COM COOKIES ARTESANAIS EM CASA",
-  image: { alt: "Materiais do desafio Cookies Lucrativos para vender cookies artesanais", width: 1100, height: 1100 },
+  logo: { src: "/logo-macrame2.png", alt: "Biblioteca Ilustrada de Mesa Posta em Macramê", width: 770, height: 514 },
+  titleHighlight: "Crie peças de macramê mesa posta ",
+  title: "com +50 projetos guiados visualmente passo a passo",
+  image: macrameHeroImage,
   subtitle:
-    "Você aprenderá a produzir e vender cookies artesanais na sua própria cozinha, conquistando vendas que podem gerar R$200 ou mais por dia, mesmo sem experiência anterior.",
-  ctaLabel: "QUERO COMEÇAR AGORA",
-  note: "Você não precisa abrir uma confeitaria. A maioria das primeiras vendas acontece para vizinhos, colegas de trabalho, faculdade e contatos do WhatsApp.",
+    "Você receberá uma coleção organizada de projetos de macramê para mesa posta, com guias visuais que facilitam a produção e garantem resultados incríveis.",
+  ctaLabel: "Quero acessar agora",
+  note: "📲 Você recebe tudo na hora, direto no seu e-mail",
   checks: [
-    "Receitas fáceis e rápidas de cookies",
-    "Estratégias de preços lucrativos",
-    "Embalagens atrativas para venda",
-    "Desafio de 7 dias para suas primeiras vendas",
-    "Suporte em grupo exclusivo",
+    "Projetos prontos para seguir passo a passo",
+    "Informações claras sobre materiais e medidas",
+    "Dicas para evitar erros comuns",
+    "Ideal para iniciantes e artesãs experientes",
+    "Transforme seu tempo livre em criatividade",
   ],
-  deliveryNote: "Você recebe tudo na hora, direto no seu e-mail ✉️ e 📞. É só imprimir e usar.",
-  socialProofLabel: "Mais de 2.000 aluno(a)s",
+  deliveryNote: "📲 Você recebe tudo na hora, direto no seu e-mail",
+  socialProofLabel: "Mais de 2.000 alunas",
 };
 
 export const materials = {
-  title: "VEJA AS RECEITAS QUE VOCÊ VAI RECEBER JÁ!",
+  title: "VEJA OS PROJETOS QUE VOCÊ VAI RECEBER",
   imageSize: { width: 575, height: 863 },
   items: [
-    { alt: "Ficha da receita: Cookies KitKat" },
-    { alt: "Ficha da receita: Cookies Nutella" },
-    { alt: "Ficha da receita: Cookies Oreo" },
-    { alt: "Ficha da receita: Cookies Ferrero Rocher" },
+    { alt: "Projeto de macramê entregue 1", src: "/entregaveis-macrame (1) (1).jpg" },
+    { alt: "Projeto de macramê entregue 2", src: "/entregaveis-macrame (2) (1).jpg" },
+    { alt: "Projeto de macramê entregue 3", src: "/entregaveis-macrame (3) (1).jpg" },
+    { alt: "Projeto de macramê entregue 4", src: "/entregaveis-macrame (4) (1).jpg" },
+    { alt: "Projeto de macramê entregue 5", src: "/entregaveis-macrame (5) (1).jpg" },
+    { alt: "Projeto de macramê entregue 6", src: "/entregaveis-macrame (6) (1).jpg" },
+    { alt: "Projeto de macramê entregue 7", src: "/entregaveis-macrame (7) (1).jpg" },
+    { alt: "Projeto de macramê entregue 8", src: "/entregaveis-macrame (8) (1).jpg" },
   ],
 };
 
 export const testimonials = {
-  title: "Veja os depoimentos dos nossos clientes!",
-  imageSize: { width: 738, height: 1460 },
+  title: "Veja o que nossas clientes estão dizendo!",
+  imageSize: { width: 800, height: 1000 },
   items: [
-    { alt: "Depoimento de aluna no WhatsApp" },
-    { alt: "Depoimento de aluna no WhatsApp" },
-    { alt: "Depoimento de aluna no WhatsApp" },
-    { alt: "Depoimento de aluna no WhatsApp" },
-    { alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
-    { alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
-    { alt: "Depoimento de aluna no Instagram", size: { width: 738, height: 1312 } },
+    { alt: "Peça de macramê para mesa posta", src: "/fotos-macrame-1.jpg" },
+    { alt: "Projeto de sousplat em macramê", src: "/fotos-macrame-2.jpg" },
+    { alt: "Jogo americano de macramê", src: "/fotos-macrame-3.jpg" },
+    { alt: "Caminho de mesa em macramê", src: "/fotos-macrame-4.jpg" },
+    { alt: "Decoração de mesa com macramê", src: "/fotos-macrame-5.jpg" },
+  ],
+};
+
+export const studentProjects = {
+  title: "VEJA OS PROJETOS QUE NOSSOS ALUNO(A)S JÁ FAZERAM",
+  imageSize: { width: 800, height: 1000 },
+  items: [
+    {
+      name: "Camila R.",
+      city: "Curitiba — PR",
+      alt: "Sousplat de macramê feito por Camila",
+      src: "/feedbacks-macrame-1.jpg",
+    },
+    {
+      name: "Fernanda M.",
+      city: "Belo Horizonte — MG",
+      alt: "Jogo americano de macramê feito por Fernanda",
+      src: "/feedbacks-macrame-2.jpg",
+    },
+    {
+      name: "Marcos S.",
+      city: "Florianópolis — SC",
+      alt: "Caminho de mesa de macramê feito por Juliana",
+      src: "/feedbacks-macrame-3.jpg",
+    },
+    {
+      name: "Patrícia L.",
+      city: "Goiânia — GO",
+      alt: "Porta-copos de macramê feito por Patrícia",
+      src: "/feedbacks-macrame-4.jpg",
+    },
+    {
+      name: "Amanda T.",
+      city: "Salvador — BA",
+      alt: "Sousplat decorativo feito por Amanda",
+      src: "/feedbacks-macrame-5.jpg",
+    },
   ],
 };
 
 export const whySection = {
-  title: "OS MATERIAIS DO DESAFIO COOKIES LUCRATIVOS POSSUEM:",
+  title: "OS PROJETOS DA BIBLIOTECA ILUSTRADA POSSUEM:",
   cards: [
-    { icon: "📖", text: "Receitas testadas e aprovadas — fáceis de seguir e aplicar" },
-    { icon: "💰", text: "Orientações sobre precificação — saiba quanto cobrar" },
-    { icon: "🎁", text: "Sugestões de embalagens — atraia mais clientes com um bom visual" },
-    { icon: "🗓️", text: "Desafio de 7 dias — comece a vender rapidamente" },
-    { icon: "💬", text: "Acesso a uma comunidade de suporte — tire dúvidas e troque experiências" },
+    { icon: "🖼️", text: "Guias visuais detalhadas — siga cada passo com clareza." },
+    { icon: "📋", text: "Lista completa de materiais — tudo que você precisa, organizado." },
+    { icon: "⏱️", text: "Tempo médio de produção — saiba quanto tempo vai levar." },
+    { icon: "✨", text: "Dicas de acabamento — para deixar suas peças ainda mais bonitas." },
+    { icon: "⚠️", text: "Erros mais comuns — evite falhas e produza com segurança." },
   ],
 };
 
 export const idealSection = {
-  title: "ESTE DESAFIO É IDEAL PARA VOCÊ QUE DESEJA",
+  title: "ESTA BIBLIOTECA É IDEAL PARA VOCÊ QUE DESEJA",
   items: [
-    { title: "AUMENTAR SUA RENDA MENSAL", desc: "Ganhar até R$1.000 a mais por semana, trabalhando em casa." },
-    { title: "TRABALHAR NO SEU PRÓPRIO TEMPO", desc: "Produzir e vender cookies nas horas vagas, sem pressão." },
-    { title: "APRENDER UMA NOVA HABILIDADE", desc: "Descubra como fazer cookies deliciosos mesmo sem experiência." },
-    { title: "TER SUPORTE E COMUNIDADE", desc: "Contar com ajuda de outras confeiteiras em um grupo exclusivo." },
-    { title: "VENDER DE FORMA SIMPLES", desc: "Aprender a conquistar clientes com ações práticas e diretas." },
-    { title: "CRIAR LEMBRANÇAS GOSTOSAS", desc: "Fazer cookies que podem se tornar a sua nova fonte de renda." },
+    { title: "APRENDER MACRAMÊ SEM DIFICULDADE", desc: "Siga guias visuais e produza peças incríveis sem estresse e sem erros." },
+    { title: "DECORAR SUA CASA COM PEÇAS EXCLUSIVAS", desc: "Crie decorações únicas que refletirão seu estilo pessoal e criatividade." },
+    { title: "ENCONTRAR UM HOBBY PRAZEROSO", desc: "Desconecte-se da rotina e relaxe enquanto cria suas próprias peças." },
+    { title: "SENTIR ORGULHO DE SUAS CRIAÇÕES", desc: "Finalize cada projeto com satisfação e compartilhe com amigos e familiares." },
+    { title: "EVITAR DESPERDÍCIO DE MATERIAIS", desc: "Saiba exatamente o que usar e como executar, evitando erros comuns." },
+    { title: "DESENVOLVER UMA HABILIDADE ARTÍSTICA", desc: "Aprimore sua técnica e crie peças cada vez mais sofisticadas." },
   ],
 };
 
@@ -91,73 +137,87 @@ export const offerSection = {
   title: "TUDO O QUE VOCÊ VAI RECEBER",
   pill: "⚡ACESSO IMEDIATO",
   cardTitle: "TUDO FOI ORGANIZADO PARA SER SIMPLES E FÁCIL DE APLICAR.",
-  image: { alt: "Materiais do desafio Cookies Lucrativos", width: 1100, height: 1100 },
+  image: macrameHeroImage,
   features: [
-    "Precificação: o preço certo para lucrar em cada cookie",
-    "Custos e margem: saiba quanto sobra em cada venda",
-    "Embalagens prontas que valorizam seu cookie",
-    "Como conseguir e fidelizar as primeiras clientes",
+    "Coleção de Sousplats",
+    "Jogos americanos personalizados",
+    "Caminhos de mesa decorativos",
+    "Porta-copos criativos",
+    "Guia de produção passo a passo",
+    "Lista de materiais detalhada",
+    "Dicas de acabamento",
+    "Erros mais comuns a evitar",
+    "Guia visual dos nós",
   ],
   moreLabel: "E MUITO MAIS...",
-  ctaLabel: "QUERO COMEÇAR AGORA",
+  ctaLabel: "QUERO ACESSAR AGORA",
   deliveryNote: hero.deliveryNote,
 };
 
 export const bonusSection = {
-  titleLines: ["E NÃO PARA POR AÍ... TEM MAIS!", "você também vai receber:"],
-  pill: "🎁 3 BÔNUS EXCLUSIVOS",
+  titleLines: ["E NÃO PARA POR AÍ... TEM MAIS!", "Você também vai receber…"],
+  pill: "🎁 8 BÔNUS EXCLUSIVOS",
   exclusiveNote: ["BÔNUS INCLUSO APENAS", "NO PLANO COMPLETO"],
   items: [
-    { title: "Instagram Magnético para Confeiteiras", desc: "Como atrair clientes pelo Instagram.", price: "R$27" },
-    { title: "20 Ações para Conseguir Clientes", desc: "Ações simples para gerar pedidos.", price: "R$27" },
-    { title: "Comunidade Primeiras Vendas", desc: "Grupo exclusivo para networking e dúvidas.", price: "R$27" },
+    { title: "Biblioteca Ilustrada de Decoração para Sala", desc: "Uma coleção de projetos em macramê para compor salas de estar, incluindo painéis, cachepôs e peças decorativas.", price: "R$27", image: { src: "/bonus-cover-1.jpg", alt: "Capa do bônus: Biblioteca Ilustrada de Decoração para Sala", width: 600, height: 800 } },
+    { title: "Biblioteca Ilustrada de Decoração para Quarto", desc: "Projetos exclusivos para criar uma decoração aconchegante no quarto, com peças ilustradas e planejamento completo de produção.", price: "R$27", image: { src: "/bonus-cover-2.jpg", alt: "Capa do bônus: Biblioteca Ilustrada de Decoração para Quarto", width: 600, height: 800 } },
+    { title: "Biblioteca Ilustrada para Datas Especiais", desc: "Projetos temáticos para Natal, Páscoa, Dia das Mães e outras ocasiões especiais, permitindo renovar a decoração ao longo do ano.", price: "R$27", image: { src: "/bonus-cover-3.jpg", alt: "Capa do bônus: Biblioteca Ilustrada para Datas Especiais", width: 600, height: 800 } },
+    { title: "Guia Visual de Combinações de Cores", desc: "Diversas paletas prontas para combinar cordões, tecidos e elementos da mesa posta, facilitando a criação de peças elegantes.", price: "R$27", image: { src: "/bonus-cover-4.jpg", alt: "Capa do bônus: Guia Visual de Combinações de Cores", width: 600, height: 800 } },
+    { title: "Biblioteca de Variações dos Projetos", desc: "Versões alternativas dos projetos principais com novos tamanhos, formatos e combinações para ampliar as possibilidades de criação.", price: "R$27", image: { src: "/bonus-cover-5.jpg", alt: "Capa do bônus: Biblioteca de Variações dos Projetos", width: 600, height: 800 } },
+    { title: "Guia de Conservação das Peças", desc: "Orientações para limpeza, armazenamento e manutenção das peças em macramê, ajudando a preservar a beleza e a durabilidade do trabalho.", price: "R$27", image: { src: "/bonus-6.jpg", alt: "Capa do bônus: Guia de Conservação das Peças", width: 600, height: 800 } },
+    { title: "Primeira Peça Guiada", desc: "Um projeto pensado para quem está começando, apresentado em passo a passo ilustrado que acompanha cada etapa da produção.", price: "R$27", image: { src: "/bonus-cover-7.jpg", alt: "Capa do bônus: Primeira Peça Guiada", width: 600, height: 800 } },
+    { title: "Manual de Correção de Erros", desc: "Um guia visual mostrando os erros mais comuns durante a confecção das peças, como identificá-los rapidamente e quais ajustes fazer.", price: "R$27", image: { src: "/bonus-8.jpg", alt: "Capa do bônus: Primeira Peça Guiada", width: 600, height: 800 }  },
   ],
 };
 
 /** Itens 🎁 exibidos nas listas dos planos (tachados no Básico, inclusos no Completo). */
 export const bonusFeatures = [
-  "🎁 Instagram Magnético para Confeiteiras",
-  "🎁 20 Ações para Conseguir Clientes",
-  "🎁 Comunidade Primeiras Vendas",
+  "🎁 BÔNUS - Biblioteca Ilustrada de Decoração para Sala",
+  "🎁 BÔNUS - Biblioteca Ilustrada de Decoração para Quarto",
+  "🎁 BÔNUS - Biblioteca Ilustrada para Datas Especiais",
+  "🎁 BÔNUS - Guia Visual de Combinações de Cores",
+  "🎁 BÔNUS - Biblioteca de Variações dos Projetos",
+  "🎁 BÔNUS - Guia de Conservação das Peças",
+  "🎁 BÔNUS - Primeira Peça Guiada",
+  "🎁 BÔNUS - Manual de Correção de Erros",
 ];
 
 export const plansSection = {
-  pill: "⏰ OFERTA VÁLIDA POR TEMPO LIMITADO",
-  title: "ESCOLHA A MELHOR OPÇÃO PARA VOCÊ",
+  pill: "🔥 ÚLTIMA CHANCE — OFERTA TERMINA HOJE",
+  title: "ESCOLHA A OPÇÃO IDEAL PARA VOCÊ",
   basic: {
     name: "Plano Básico",
-    image: { alt: "Materiais do Plano Básico do desafio Cookies Lucrativos", width: 1104, height: 1104 },
-    receiveLabel: "você recebe:",
+    image: { alt: "Mockup do Plano Básico da Biblioteca Ilustrada de Mesa Posta em Macramê", width: 1104, height: 1104 },
+    receiveLabel: "Você recebe:",
     features: [
-      "Receitas de Cookies Clássicos",
-      "Guia de Precificação Lucrativa",
-      "Sugestões de Embalagens Criativas",
-      "Acesso ao Desafio de 7 dias",
+      "Acesso à Biblioteca de Projetos",
+      "Guias de Produção",
+      "Lista de Materiais",
+      "Dicas de Acabamento",
     ],
     oldPrice: "R$37,90",
     price: "R$27,90",
     installments: "ou 4x de R$7,47 no cartão",
-    savings: "🟢 você economiza R$10,00",
-    ctaLabel: "QUERO O PLANO BÁSICO!",
+    savings: "🟢 Você economiza R$10,00",
+    ctaLabel: "QUERO GARANTIR O MEU",
   },
   complete: {
     badge: "🔥 ÚLTIMA CHANCE — OFERTA TERMINA HOJE",
     name: "PLANO COMPLETO",
     allBonusesLabel: "TODOS OS BÔNUS INCLUSOS",
-    image: { alt: "Materiais do desafio Cookies Lucrativos", width: 1100, height: 1100 },
-    pill: "⚡3X MAIS CONTEÚDOS",
+    image: macrameHeroImage,
+    pill: "⚡2x MAIS CONTEÚDOS",
     features: [
-      "Receitas de cookies clássicos e gourmet.",
-      "Guia de precificação lucrativa.",
-      "Sugestões de embalagens criativas.",
-      "Desafio de 7 dias para suas primeiras vendas.",
-      "Acesso à comunidade de suporte.",
+      "Acesso à Biblioteca de Projetos",
+      "Guias de Produção",
+      "Lista de Materiais",
+      "Dicas de Acabamento",
     ],
-    oldPrice: "R$67,90",
+    oldPrice: "R$47,90",
     price: "R$37,90",
     installments: "ou 6x de R$6,35 no cartão",
-    savings: "🟢 você economiza R$30,00",
-    ctaLabel: "QUERO O PLANO COMPLETO!",
+    savings: "🟢 Você economiza R$10,00",
+    ctaLabel: "QUERO GARANTIR O MEU COMPLETO",
   },
   upsellNote: {
     alert: "AINDA DÁ TEMPO DE LEVAR A MELHOR OPÇÃO!",
@@ -165,20 +225,20 @@ export const plansSection = {
     highlight: "SUPER OFERTA!",
   },
   paybackBadge: {
-    title: "UMA ÚNICA VENDA PODE PAGAR O VALOR DO PACOTE INTEIRO.",
-    subtitle: "Todo o resto vira lucro.",
+    title: "🔒 Compra 100% segura e garantida",
+    subtitle: "Pagamento processado por plataforma segura.",
   },
 };
 
 export const guarantee = {
   seal: { alt: "Selo de garantia de 7 dias", width: 241, height: 242 },
-  title: "Compra 100% Segura e Garantida!",
-  intro: "SEU INVESTIMENTO É TOTALMENTE SEGURO",
-  lead: "Isso significa que, a qualquer momento, se você achar que:",
+  title: "GARANTIA DE 7 DIAS",
+  intro: "Isso significa que, a qualquer momento, se você achar que:",
+  lead: "",
   bullets: [
-    "o material não faz sentido para suas vendas.",
-    "as receitas não atendem suas expectativas.",
-    "ou simplesmente não quiser continuar.",
+    "o material não faz sentido para sua produção",
+    "os projetos não atendem sua necessidade",
+    "ou simplesmente não quiser continuar",
   ],
   outro: "Você pode solicitar o reembolso. Sem prazo, sem burocracia.",
   outroStrong: "O risco fica todo do nosso lado.",
@@ -186,60 +246,51 @@ export const guarantee = {
 };
 
 export const contact = {
-  email: "contato@acookielab.com",
+  email: "contato@blogestudos.com",
 };
 
 export const stepsSection = {
-  title: "Como funciona o acesso:",
-  subtitle: "(passo a passo)",
-  ctaLabel: "QUERO ACESSAR AGORA!",
+  title: "COMO É O ACESSO",
+  subtitle: "(VEJA COMO É SIMPLES OBTER SEU MATERIAL.)",
+  ctaLabel: "QUERO COMEÇAR AGORA",
   steps: [
     {
       icon: "🛒",
       title: "Conclua sua compra",
       desc: "Após o pagamento, seu acesso é liberado automaticamente.",
-      items: ["Você recebe um e-mail de confirmação.", "Acesse a área de membros."],
+      items: ["Você recebe um e-mail de confirmação", "Acesse sua área de membros"],
     },
     {
-      icon: "📱",
-      title: "Entre na área de membros",
-      desc: "Acesse o conteúdo exclusivo do desafio.",
-      items: ["Receitas e guias disponíveis.", "Suporte em grupo para dúvidas.", "Networking com outras confeiteiras."],
+      icon: "🔍",
+      title: "Escolha seu projeto",
+      desc: "Selecione a peça que deseja produzir.",
+      items: ["Veja as opções disponíveis", "Escolha a que mais gosta", "Clique para acessar o guia"],
     },
     {
-      icon: "📁",
-      title: "Baixe os arquivos",
-      desc: "Tenha acesso a todos os materiais prontos.",
-      items: ["Receitas em formato PDF.", "Guias prontos para impressão.", "Conteúdo acessível sempre que precisar."],
+      icon: "📖",
+      title: "Siga o guia passo a passo",
+      desc: "Acompanhe as instruções e produza sua peça.",
+      items: ["Siga a ordem de produção", "Use a lista de materiais", "Aproveite as dicas de acabamento"],
     },
     {
-      icon: "🍪",
-      title: "Use e aplique",
-      desc: "Comece a produzir e vender seus cookies.",
-      items: ["Imprima as receitas.", "Prepare os cookies.", "Venda e veja sua renda aumentar."],
+      icon: "🎉",
+      title: "Finalize sua peça",
+      desc: "Conclua sua criação e compartilhe com orgulho.",
+      items: ["Mostre suas criações para amigos", "Decore sua casa com suas peças", "Sinta-se realizada com seu trabalho"],
     },
   ],
 };
 
 export const faq: readonly (readonly [string, string])[] = [
-  ["Nunca fiz cookies. Esse material é para mim?", "Sim! O método foi pensado para iniciantes: as receitas trazem o passo a passo completo, com técnicas explicadas do zero."],
-  ["Preciso ter experiência na cozinha?", "Não. Você só precisa seguir as receitas — os segredos da massa, preparo e modelagem estão detalhados no material."],
-  ["Quanto preciso investir para começar?", "Muito pouco. Os ingredientes são fáceis de encontrar em qualquer mercado e você pode começar com o que já tem na sua cozinha."],
-  ["Quanto posso ganhar vendendo cookies?", "Depende do quanto você produz e vende. Para ter uma referência: um cookie gourmet é vendido em média entre R$10 e R$16, com custo de produção bem menor que isso. O material inclui a planilha de precificação e margem para você saber exatamente seu lucro por fornada."],
-  ["Como vou receber o material?", "Imediatamente após a compra, direto no seu e-mail. É só baixar, imprimir e usar."],
-  ["O acesso é vitalício?", "Sim! Você paga uma única vez e o material é seu para sempre."],
-  ["Os bônus estão inclusos?", "Os 4 bônus exclusivos estão inclusos apenas no Plano Completo."],
-  ["Posso assistir pelo celular?", "Sim, o material funciona em celular, computador e tablet."],
-  ["E se eu não gostar do material?", "Você tem 7 dias de garantia total. Basta pedir o reembolso e devolvemos todo o valor pago."],
-  ["A compra é segura?", "Totalmente. O pagamento é processado por plataforma segura e seus dados ficam protegidos."],
-  ["Funciona para quem mora em cidade pequena?", "Sim! Em cidades pequenas a concorrência é menor e o boca a boca funciona ainda mais rápido. Vizinhos, escolas, comércios e eventos locais são ótimos pontos de venda."],
-  ["Eu sou tímida, não sei vender nem abordar as pessoas", "Sem problema. O bônus de como conseguir os primeiros clientes traz estratégias simples que não dependem de abordagem: você pode vender pelo WhatsApp, Instagram e por indicação — o produto chama atenção sozinho."],
-  ["Tenho pouco tempo no meu dia, dá para vender mesmo assim?", "Dá sim. Você pode produzir em poucas horas nos horários livres ou finais de semana. A massa pode ser feita com antecedência, e você pode trabalhar por encomenda, produzindo só o que já foi vendido, sem desperdício."],
-  ["Preciso ter muitos equipamentos para começar?", "Não. Forno, batedeira (ou até mesmo as mãos), tigelas e assadeiras que você provavelmente já tem em casa são suficientes para começar."],
-  ["Por que esse material é diferente de uma simples receita de Cookie?", "Porque receita sozinha não gera renda. Aqui você recebe 100 receitas validadas + o passo a passo do negócio: precificação, cálculo de custos, embalagens e estratégias para conseguir e fidelizar clientes."],
+  ["Preciso ter experiência em macramê para começar?", "Não! A Biblioteca foi desenvolvida com guias visuais detalhados que tornam o aprendizado acessível para qualquer pessoa, independente do nível de experiência."],
+  ["Os materiais estão inclusos?", "Os materiais físicos (cordões, anéis etc.) não estão inclusos, mas cada projeto traz uma lista completa e detalhada com tudo que você precisa adquirir antes de começar."],
+  ["O acesso é imediato após a compra?", "Sim! Assim que o pagamento for confirmado, você recebe o acesso direto no seu e-mail."],
+  ["Posso pedir reembolso se não gostar?", "Sim. Você tem 7 dias de garantia total. Basta solicitar o reembolso e devolvemos todo o valor pago, sem burocracia."],
+  ["Os projetos são editáveis?", "Os projetos são entregues em formato digital para visualização. Eles não são editáveis, mas estão organizados de forma clara para facilitar o uso."],
+  ["Receberei suporte caso tenha dúvidas?", "Sim. Você pode entrar em contato pelo e-mail de suporte e nossa equipe estará disponível para ajudar."],
 ];
 
 export const footer = {
   legal:
-    "Este site não possui qualquer vínculo com Facebook, Google ou qualquer outra plataforma mencionada. Todos os direitos da obra “Desafio Cookies Lucrativos” são reservados ao seu autor. A reprodução não autorizada, total ou parcial, por qualquer meio, constitui violação de direitos autorais e pode resultar em sanções civis e criminais, de acordo com a legislação aplicável.",
+    "Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Após sair do Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais fazemos algum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial de Segunda a Sextas das 09h00 às 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.",
 };

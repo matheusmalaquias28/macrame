@@ -9,7 +9,10 @@
   --color-navy: #041774;
   --color-alert: #e30000;
   --color-muted: #757575;
-  --font-display: var(--font-fredoka);
+}
+
+@theme inline {
+  --font-display: var(--font-poppins);
   --font-sans: var(--font-manrope);
 }
 
@@ -102,6 +105,20 @@ body {
   animation-delay: var(--fx-delay, 0s), calc(var(--fx-delay, 0s) + 0.55s);
 }
 
+.bonus-seal-spin {
+  animation: bonus-seal-spin 10s linear infinite;
+  will-change: transform;
+}
+
+@keyframes bonus-seal-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 details summary::-webkit-details-marker {
   display: none;
 }
@@ -112,6 +129,9 @@ details[open] .faq-chevron {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .bonus-seal-spin {
+    animation-duration: 0.01ms !important;
   }
   *,
   *::before,

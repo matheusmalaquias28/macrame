@@ -1,32 +1,51 @@
 import type { Metadata } from "next";
-import { Fredoka, Manrope } from "next/font/google";
+import { Manrope, Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Gtm } from "@/components/Gtm";
+import { ThirdPartyScripts } from "@/components/ThirdPartyScripts";
+import { hero } from "@/lib/content";
 import "./globals.css";
 
-const fredoka = Fredoka({
-  variable: "--font-fredoka",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
+const pageTitle = `${hero.titleHighlight}${hero.title}`;
+
 export const metadata: Metadata = {
-  title: "Cookies Lucrativos | Renda Extra com Cookies Artesanais",
-  description:
-    "Aprenda a produzir e vender cookies artesanais na sua própria cozinha, conquistando vendas que podem gerar R$200 ou mais por dia, mesmo sem experiência anterior.",
+  title: pageTitle,
+  description: hero.subtitle,
+  applicationName: pageTitle,
+  keywords: ["macramê", "mesa posta", "projetos de macramê", "macramê passo a passo"],
   openGraph: {
-    title: "Cookies Lucrativos | Renda Extra com Cookies Artesanais",
-    description:
-      "Receitas testadas, precificação, embalagens e desafio de 7 dias para transformar sua cozinha em uma nova fonte de renda.",
+    title: pageTitle,
+    description: hero.subtitle,
+    siteName: pageTitle,
     locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: hero.image.src,
+        width: hero.image.width,
+        height: hero.image.height,
+        alt: hero.image.alt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: pageTitle,
+    description: hero.subtitle,
+    images: [hero.image.src],
   },
   robots: { index: true, follow: true },
   icons: {
@@ -42,25 +61,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${fredoka.variable} ${manrope.variable} antialiased`}>
+    <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable} antialiased`}>
       <body>
-        <script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          data-utmify-prevent-subids
-          async
-          defer
-        />
-        {/* Microsoft Clarity */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xo7jsjm0j0");`,
-          }}
-        />
         {children}
+        <ThirdPartyScripts />
         <Gtm />
         <Analytics />
         <SpeedInsights />
