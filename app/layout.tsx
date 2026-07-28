@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Gtm } from "@/components/Gtm";
 import { ThirdPartyScripts } from "@/components/ThirdPartyScripts";
 import { hero } from "@/lib/content";
@@ -10,18 +9,23 @@ import "./globals.css";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "600", "700"],
+  display: "swap",
+  preload: false,
 });
 
 const pageTitle = `${hero.titleHighlight}${hero.title}`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://macrame.blogestudos.com"),
   title: pageTitle,
   description: hero.subtitle,
   applicationName: pageTitle,
@@ -62,12 +66,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable} antialiased`}>
+      <head>
+        <link rel="preload" as="image" href="/macrame-hero.webp" type="image/webp" fetchPriority="high" />
+      </head>
       <body>
         {children}
         <ThirdPartyScripts />
         <Gtm />
         <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

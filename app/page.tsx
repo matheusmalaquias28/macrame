@@ -5,7 +5,8 @@ import { Marquee } from "@/components/Marquee";
 import { BonusSeal } from "@/components/BonusSeal";
 import { CtaButton } from "@/components/CtaButton";
 import { TodayDate } from "@/components/TodayDate";
-import { StickyCta } from "@/components/StickyCta";
+import { HeroImage } from "@/components/HeroImage";
+import { StickyCtaLoader } from "@/components/StickyCtaLoader";
 import { CHECKOUT_BASIC, CHECKOUT_COMPLETE } from "@/lib/config";
 import {
   theme,
@@ -96,6 +97,7 @@ function Avatars() {
             aria-hidden
             width={42}
             height={42}
+            loading="lazy"
             className={`rounded-full object-cover ${cls} ${i > 0 ? "-ml-[8px]" : ""}`}
           />
         ))}
@@ -155,30 +157,25 @@ export default function Home() {
           {offerBar.text} <TodayDate />
         </p>
       </div>
-      <StickyCta />
+      <StickyCtaLoader />
 
       {/* Hero */}
       <section className="mx-auto flex w-full max-w-[480px] flex-col items-center gap-[16px] px-[10px] pt-[0px] text-center">
         <Image
           src={hero.logo.src}
           alt={hero.logo.alt}
-          width={hero.logo.width}
-          height={hero.logo.height}
-          priority
+          width={180}
+          height={60}
+          sizes="180px"
+          loading="eager"
+          fetchPriority="low"
           className="h-[60px] w-auto"
         />
         <h1 className="font-display text-[38px] font-bold leading-[0.99] text-ink uppercase">
           <span className="text-brand">{hero.titleHighlight}</span>
           {hero.title}
         </h1>
-        <Image
-          src={hero.image.src}
-          alt={hero.image.alt}
-          width={hero.image.width}
-          height={hero.image.height}
-          priority
-          className="mx-auto mt-[10px] h-auto w-full max-w-[383px] rounded-[10px]"
-        />
+        <HeroImage />
         <p className="max-w-[362px] text-[16px]">{hero.subtitle}</p>
 
         <CtaButton href="#plano-completo" label={hero.ctaLabel} id="hero" className="max-w-[382px]" />
@@ -261,8 +258,10 @@ export default function Home() {
           <Image
             src={offerSection.image.src}
             alt={offerSection.image.alt}
-            width={offerSection.image.width}
-            height={offerSection.image.height}
+            width={383}
+            height={383}
+            sizes="383px"
+            loading="lazy"
             className="h-auto w-full max-w-[383px] rounded-[10px]"
           />
           <FeatureList items={[...offerSection.features, ...bonusFeatures]} light />
@@ -291,6 +290,7 @@ export default function Home() {
                       alt={b.image.alt}
                       fill
                       sizes="(max-width: 768px) 252px, (max-width: 1024px) 30vw, 204px"
+                      loading="lazy"
                       className="object-cover"
                     />
                   ) : (
@@ -333,8 +333,10 @@ export default function Home() {
           <Image
             src="/plano-basico (2).jpeg"
             alt={plansSection.basic.image.alt}
-            width={plansSection.basic.image.width}
-            height={plansSection.basic.image.height}
+            width={383}
+            height={383}
+            sizes="383px"
+            loading="lazy"
             className="h-auto w-full max-w-[383px] rounded-[10px]"
           />
           <h2 className="font-display text-[32px] font-semibold leading-[1.1] text-black">{plansSection.basic.receiveLabel}</h2>
@@ -371,8 +373,10 @@ export default function Home() {
             <Image
               src={plansSection.complete.image.src}
               alt={plansSection.complete.image.alt}
-              width={plansSection.complete.image.width}
-              height={plansSection.complete.image.height}
+              width={383}
+              height={383}
+              sizes="383px"
+              loading="lazy"
               className="h-auto w-full max-w-[383px] rounded-[10px]"
             />
             <Pill>{plansSection.complete.pill}</Pill>
@@ -411,6 +415,7 @@ export default function Home() {
           alt={guarantee.seal.alt}
           width={guarantee.seal.width}
           height={guarantee.seal.height}
+          loading="lazy"
           className="h-auto w-full max-w-[241px]"
         />
         <h2 className="font-display text-[32px] font-semibold leading-[1.11] text-white">{guarantee.title}</h2>

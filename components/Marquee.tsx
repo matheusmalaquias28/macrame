@@ -51,6 +51,8 @@ export function Marquee({
                     alt={copy === 0 ? it.alt : ""}
                     fill
                     sizes={`${itemWidth}px`}
+                    loading="lazy"
+                    fetchPriority="low"
                     className="object-cover"
                   />
                 ) : (

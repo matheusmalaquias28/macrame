@@ -49,6 +49,8 @@ export function StudentProjectsMarquee({
                     alt={copy === 0 ? item.alt : ""}
                     fill
                     sizes={`${itemWidth}px`}
+                    loading="lazy"
+                    fetchPriority="low"
                     className="object-cover"
                   />
                 ) : (

@@ -20,10 +20,10 @@ export const offerBar = {
 };
 
 const macrameHeroImage = {
-  src: "/macrame-hero.jpeg",
+  src: "/macrame-hero.webp",
   alt: "Mockup do pacote Biblioteca Ilustrada de Mesa Posta em Macramê com bônus",
-  width: 1100,
-  height: 1100,
+  width: 828,
+  height: 828,
 };
 
 export const hero = {

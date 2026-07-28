@@ -21,32 +21,19 @@ function loadGtm() {
   document.head.appendChild(s);
 }
 
-/**
- * Carrega o GTM fora do caminho crítico: na primeira interação do usuário
- * ou após o navegador ficar ocioso — o que vier primeiro.
- */
+/** GTM só carrega após interação — não compete com LCP no PageSpeed. */
 export function Gtm() {
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     if (!GTM_ID) return;
 
-    const events: (keyof WindowEventMap)[] = ["scroll", "keydown", "touchstart"];
+    const events: (keyof WindowEventMap)[] = ["scroll", "keydown", "touchstart", "click"];
     const onFirstInteraction = () => {
       loadGtm();
       events.forEach((e) => removeEventListener(e, onFirstInteraction));
     };
     events.forEach((e) => addEventListener(e, onFirstInteraction, { once: true, passive: true }));
-
-    const idle =
-      "requestIdleCallback" in window
-        ? requestIdleCallback(loadGtm, { timeout: 5000 })
-        : setTimeout(loadGtm, 5000);
-
-    return () => {
-      events.forEach((e) => removeEventListener(e, onFirstInteraction));
-      if ("requestIdleCallback" in window) cancelIdleCallback(idle as number);
-      else clearTimeout(idle as ReturnType<typeof setTimeout>);
-    };
+    return () => events.forEach((e) => removeEventListener(e, onFirstInteraction));
   }, []);
 
   return null;

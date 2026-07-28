@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# lighthouse / pagespeed reports
+pagespeed-*.json
+.tmp-lh/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

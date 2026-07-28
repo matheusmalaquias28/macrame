@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { track } from "@/components/Gtm";
-import { fbTrackCustom } from "@/components/MetaPixel";
+import { trackCtaClick } from "@/lib/tracking";
 
 /**
  * CTA fixo no rodapé do mobile: aparece depois que o hero sai da tela
- * e some enquanto o card do Plano Completo está visível (para não cobrir o botão real).
+ * e some enquanto o card do Plano Completo está visível.
  */
 export function StickyCta() {
   const [pastHero, setPastHero] = useState(false);
@@ -38,8 +37,7 @@ export function StickyCta() {
         href="#plano-completo"
         tabIndex={show ? 0 : -1}
         onClick={() => {
-          track("cta_click", { cta_id: "sticky_mobile", cta_label: "QUERO COMEÇAR AGORA" });
-          fbTrackCustom("CtaClick", { cta_id: "sticky_mobile", cta_label: "QUERO COMEÇAR AGORA" });
+          void trackCtaClick("sticky_mobile", "QUERO COMEÇAR AGORA");
         }}
         className="mx-auto flex h-[56px] w-full max-w-[420px] items-center justify-center rounded-full bg-cta font-display text-[20px] font-semibold text-white shadow-[0_8px_24px_rgba(0,0,0,0.25)] active:scale-[0.98]"
       >

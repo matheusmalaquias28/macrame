@@ -11,7 +11,7 @@ As imagens e textos atuais são apenas exemplo (Desafio Cookies Lucrativos) — 
 4. Troque os links de checkout em **`lib/config.ts`**.
 5. Adicione suas imagens em **`public/`** (hero, planos, bônus, carrosséis, logo) e substitua os placeholders nos componentes.
 6. Atualize o SEO em **`app/layout.tsx`** (title/description/OG) e, se quiser, **`app/icon.png`** e **`app/opengraph-image.png`** (favicon e imagem social).
-7. Configure os pixels/tracking em **`app/layout.tsx`** (GTM via `NEXT_PUBLIC_GTM_ID`, Clarity, Utmify — remova o que não usar).
+7. Configure os pixels/tracking em **`app/layout.tsx`** (GTM via `NEXT_PUBLIC_GTM_ID`, Utmify — remova o que não usar).
 8. Deploy na Vercel.
 
 ## Estrutura

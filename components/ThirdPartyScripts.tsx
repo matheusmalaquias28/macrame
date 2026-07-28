@@ -1,12 +1,6 @@
 "use client";
 
-import { useLayoutEffect } from "react";
-
-declare global {
-  interface Window {
-    clarity?: ((...args: unknown[]) => void) & { q?: unknown[] };
-  }
-}
+import { useEffect } from "react";
 
 function loadUtmify() {
   if (document.querySelector('script[data-utmify="true"]')) return;
@@ -53,25 +47,21 @@ function loadUtmifyPixel() {
   document.head.appendChild(script);
 }
 
-function loadClarity() {
-  if (window.clarity) return;
-
-  window.clarity = function (...args: unknown[]) {
-    (window.clarity!.q = window.clarity!.q || []).push(args);
-  };
-
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = "https://www.clarity.ms/tag/xo7jsjm0j0";
-  document.head.appendChild(script);
+function loadThirdPartyScripts() {
+  loadUtmify();
+  loadUtmifyPixel();
 }
 
-/** Carrega Utmify, seu pixel e Microsoft Clarity sem tags <script> no JSX. */
+/** Utmify só carrega após interação do usuário — fora do caminho crítico do Lighthouse. */
 export function ThirdPartyScripts() {
-  useLayoutEffect(() => {
-    loadUtmify();
-    loadUtmifyPixel();
-    loadClarity();
+  useEffect(() => {
+    const events: (keyof WindowEventMap)[] = ["scroll", "keydown", "touchstart", "click"];
+    const onFirstInteraction = () => {
+      loadThirdPartyScripts();
+      events.forEach((e) => removeEventListener(e, onFirstInteraction));
+    };
+    events.forEach((e) => addEventListener(e, onFirstInteraction, { once: true, passive: true }));
+    return () => events.forEach((e) => removeEventListener(e, onFirstInteraction));
   }, []);
 
   return null;
