@@ -46,6 +46,16 @@ function Cross({ className = "mt-[5px] h-auto w-4" }: { className?: string }) {
   );
 }
 
+function RoundCheck() {
+  return (
+    <span className="flex size-[28px] shrink-0 items-center justify-center rounded-full bg-badge" aria-hidden>
+      <svg viewBox="0 0 18 13" fill="none" className="h-[10px] w-[14px]">
+        <path d="M17 1L6 12L1 7" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  );
+}
+
 function Pill({ children }: { children: React.ReactNode }) {
   return (
     <span className="z-10 inline-block rounded-full bg-badge px-[14px] py-[10px] text-[14px] font-semibold text-white">
@@ -171,7 +181,7 @@ export default function Home() {
           fetchPriority="low"
           className="h-[60px] w-auto"
         />
-        <h1 className="font-display text-[38px] font-bold leading-[0.99] text-ink uppercase">
+        <h1 className="hero-title font-display font-bold leading-[0.99] text-ink uppercase">
           <span className="text-brand">{hero.titleHighlight}</span>
           {hero.title}
         </h1>
@@ -211,9 +221,12 @@ export default function Home() {
         </h2>
         <div className="mx-auto flex w-full max-w-[1000px] flex-col gap-[11px]">
           {whySection.cards.map((c) => (
-            <div key={c.text} className="flex w-full items-center gap-[14px] rounded-[10px] bg-white p-[16px]">
+            <div key={c.title} className="flex w-full items-start gap-[14px] rounded-[10px] bg-white p-[16px]">
               <span className="text-[28px] leading-none" aria-hidden>{c.icon}</span>
-              <p className="text-left font-display text-[20px] leading-[1.18] text-black">{c.text}</p>
+              <div className="flex flex-col gap-[4px] text-left">
+                <p className="font-display text-[20px] font-bold leading-[1.18] text-black">{c.title}</p>
+                <p className="text-[16px] leading-[1.3] text-black/85">{c.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -226,11 +239,14 @@ export default function Home() {
         </h2>
         <div className="grid w-full gap-[11px] lg:grid-cols-3">
           {idealSection.items.map((item) => (
-            <div key={item.title} className="flex items-start gap-[12px] rounded-[10px] bg-brand p-[16px] text-left">
-              <Check />
+            <div
+              key={item.title}
+              className="flex flex-col items-center gap-[10px] rounded-[10px] bg-[#dcfce7] p-[16px] text-center"
+            >
+              <RoundCheck />
               <div className="flex flex-col gap-[6px]">
-                <p className="font-display text-[20px] font-semibold leading-[1.1] text-white">{item.title}</p>
-                <p className="text-[16px] leading-[1.3] text-white/85">{item.desc}</p>
+                <p className="font-display text-[20px] font-semibold leading-[1.1] text-black">{item.title}</p>
+                <p className="text-[16px] leading-[1.3] text-black">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -264,7 +280,7 @@ export default function Home() {
             loading="lazy"
             className="h-auto w-full max-w-[383px] rounded-[10px]"
           />
-          <FeatureList items={[...offerSection.features, ...bonusFeatures]} light />
+          <FeatureList items={offerSection.features} light />
           <p className="font-display text-[18px] text-white">{offerSection.moreLabel}</p>
           <CtaButton href="#plano-completo" label={offerSection.ctaLabel} id="oferta_principal" />
           <p className="text-[14px] font-semibold text-muted">{offerSection.deliveryNote}</p>

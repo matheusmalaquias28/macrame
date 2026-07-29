@@ -32,7 +32,7 @@ export const hero = {
   title: "com +50 projetos guiados visualmente passo a passo",
   image: macrameHeroImage,
   subtitle:
-    "Você receberá uma coleção organizada de projetos de macramê para mesa posta, com guias visuais que facilitam a produção e garantem resultados incríveis.",
+    "Crie peças sofisticadas para transformar qualquer mesa posta, mesmo que você nunca tenha feito Macramê antes.",
   ctaLabel: "Quero acessar agora",
   note: "📲 Você recebe tudo na hora, direto no seu e-mail",
   checks: [
@@ -40,14 +40,14 @@ export const hero = {
     "Informações claras sobre materiais e medidas",
     "Dicas para evitar erros comuns",
     "Ideal para iniciantes e artesãs experientes",
-    "Transforme seu tempo livre em criatividade",
+  
   ],
   deliveryNote: "📲 Você recebe tudo na hora, direto no seu e-mail",
   socialProofLabel: "Mais de 2.000 alunas",
 };
 
 export const materials = {
-  title: "VEJA OS PROJETOS QUE VOCÊ VAI RECEBER",
+  title: "ESSE É O MATERIAL REAL QUE VOCÊ VAI RECEBER",
   imageSize: { width: 575, height: 863 },
   items: [
     { alt: "Projeto de macramê entregue 1", src: "/entregaveis-macrame (1) (1).jpg" },
@@ -113,11 +113,11 @@ export const studentProjects = {
 export const whySection = {
   title: "OS PROJETOS DA BIBLIOTECA ILUSTRADA POSSUEM:",
   cards: [
-    { icon: "🖼️", text: "Guias visuais detalhadas — siga cada passo com clareza." },
-    { icon: "📋", text: "Lista completa de materiais — tudo que você precisa, organizado." },
-    { icon: "⏱️", text: "Tempo médio de produção — saiba quanto tempo vai levar." },
-    { icon: "✨", text: "Dicas de acabamento — para deixar suas peças ainda mais bonitas." },
-    { icon: "⚠️", text: "Erros mais comuns — evite falhas e produza com segurança." },
+    { icon: "🖼️", title: "Guias visuais detalhadas", desc: "Siga cada passo com clareza." },
+    { icon: "📋", title: "Lista completa de materiais", desc: "Tudo que você precisa, organizado." },
+    { icon: "⏱️", title: "Tempo médio de produção", desc: "Saiba quanto tempo vai levar." },
+    { icon: "✨", title: "Dicas de acabamento", desc: "Para deixar suas peças ainda mais bonitas." },
+    { icon: "⚠️", title: "Erros mais comuns", desc: "Evite falhas e produza com segurança." },
   ],
 };
 
