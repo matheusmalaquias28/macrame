@@ -68,6 +68,8 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable} antialiased`}>
       <head>
         <link rel="preload" as="image" href="/macrame-hero.webp" type="image/webp" fetchPriority="high" />
+        {/* Pixel Utmify no HTML inicial — sem esperar hidratação do React */}
+        <script src="/utmify-pixel.js" />
       </head>
       <body>
         {children}
