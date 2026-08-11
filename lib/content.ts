@@ -113,23 +113,23 @@ export const studentProjects = {
 export const whySection = {
   title: "OS PROJETOS DA BIBLIOTECA ILUSTRADA POSSUEM:",
   cards: [
-    { icon: "🖼️", title: "Guias visuais detalhadas", desc: "Siga cada passo com clareza." },
-    { icon: "📋", title: "Lista completa de materiais", desc: "Tudo que você precisa, organizado." },
-    { icon: "⏱️", title: "Tempo médio de produção", desc: "Saiba quanto tempo vai levar." },
-    { icon: "✨", title: "Dicas de acabamento", desc: "Para deixar suas peças ainda mais bonitas." },
-    { icon: "⚠️", title: "Erros mais comuns", desc: "Evite falhas e produza com segurança." },
+    { icon: "🖼️", title: "Guias visuais detalhadas"},
+    { icon: "📋", title: "Lista completa de materiais"},
+    { icon: "⏱️", title: "Tempo médio de produção"},
+    { icon: "✨", title: "Dicas de acabamento"},
+    { icon: "⚠️", title: "Erros mais comuns"},
   ],
 };
 
 export const idealSection = {
   title: "ESTA BIBLIOTECA É IDEAL PARA VOCÊ QUE DESEJA",
   items: [
-    { title: "APRENDER MACRAMÊ SEM DIFICULDADE", desc: "Siga guias visuais e produza peças incríveis sem estresse e sem erros." },
-    { title: "DECORAR SUA CASA COM PEÇAS EXCLUSIVAS", desc: "Crie decorações únicas que refletirão seu estilo pessoal e criatividade." },
-    { title: "ENCONTRAR UM HOBBY PRAZEROSO", desc: "Desconecte-se da rotina e relaxe enquanto cria suas próprias peças." },
-    { title: "SENTIR ORGULHO DE SUAS CRIAÇÕES", desc: "Finalize cada projeto com satisfação e compartilhe com amigos e familiares." },
-    { title: "EVITAR DESPERDÍCIO DE MATERIAIS", desc: "Saiba exatamente o que usar e como executar, evitando erros comuns." },
-    { title: "DESENVOLVER UMA HABILIDADE ARTÍSTICA", desc: "Aprimore sua técnica e crie peças cada vez mais sofisticadas." },
+    { title: "APRENDER MACRAMÊ SEM DIFICULDADE" },
+    { title: "DECORAR SUA CASA COM PEÇAS EXCLUSIVAS" },
+    { title: "ENCONTRAR UM HOBBY PRAZEROSO"},
+    { title: "SENTIR ORGULHO DE SUAS CRIAÇÕES"},
+    { title: "EVITAR DESPERDÍCIO DE MATERIAIS"},
+    { title: "DESENVOLVER UMA HABILIDADE ARTÍSTICA"},
   ],
 };
 
