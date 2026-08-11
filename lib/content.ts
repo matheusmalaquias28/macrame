@@ -110,6 +110,29 @@ export const studentProjects = {
   ],
 };
 
+export const whySection = {
+  title: "OS PROJETOS DA BIBLIOTECA ILUSTRADA POSSUEM:",
+  cards: [
+    { icon: "🖼️", title: "Guias visuais detalhadas" },
+    { icon: "📋", title: "Lista completa de materiais" },
+    { icon: "⏱️", title: "Tempo médio de produção" },
+    { icon: "✨", title: "Dicas de acabamento" },
+    { icon: "⚠️", title: "Erros mais comuns" },
+  ],
+};
+
+export const idealSection = {
+  title: "ESTA BIBLIOTECA É IDEAL PARA VOCÊ QUE DESEJA",
+  items: [
+    { title: "APRENDER MACRAMÊ SEM DIFICULDADE" },
+    { title: "DECORAR SUA CASA COM PEÇAS EXCLUSIVAS" },
+    { title: "ENCONTRAR UM HOBBY PRAZEROSO" },
+    { title: "SENTIR ORGULHO DE SUAS CRIAÇÕES" },
+    { title: "EVITAR DESPERDÍCIO DE MATERIAIS" },
+    { title: "DESENVOLVER UMA HABILIDADE ARTÍSTICA" },
+  ],
+};
+
 export const offerSection = {
   title: "TUDO O QUE VOCÊ VAI RECEBER",
   pill: "⚡ACESSO IMEDIATO",

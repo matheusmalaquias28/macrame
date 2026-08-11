@@ -15,6 +15,8 @@ import {
   materials,
   testimonials,
   studentProjects,
+  whySection,
+  idealSection,
   offerSection,
   bonusSection,
   bonusFeatures,
@@ -41,6 +43,16 @@ function Cross({ className = "mt-[5px] h-auto w-4" }: { className?: string }) {
     <svg viewBox="0 0 14 14" fill="none" className={`shrink-0 ${className}`} aria-hidden>
       <path d="M1 1L13 13M13 1L1 13" stroke="#E53935" strokeWidth="2" strokeLinecap="round" />
     </svg>
+  );
+}
+
+function RoundCheck() {
+  return (
+    <span className="flex size-[28px] shrink-0 items-center justify-center rounded-full bg-badge" aria-hidden>
+      <svg viewBox="0 0 18 13" fill="none" className="h-[10px] w-[14px]">
+        <path d="M17 1L6 12L1 7" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
   );
 }
 
@@ -200,6 +212,39 @@ export default function Home() {
       <section className="mx-auto flex w-full max-w-[480px] flex-col items-center gap-[20px] px-[10px] py-[30px] text-center lg:max-w-[640px]">
         <h2 className="font-display text-[38px] font-semibold leading-[0.99] text-ink">{materials.title}</h2>
         <MaterialsCarousel />
+      </section>
+
+      {/* O que os materiais possuem */}
+      <section className="w-full bg-brand px-[39px] py-[37px]">
+        <h2 className="mb-[24px] text-center font-display text-[38px] font-semibold leading-[0.99] text-white">
+          {whySection.title}
+        </h2>
+        <div className="mx-auto flex w-full max-w-[1000px] flex-col gap-[11px]">
+          {whySection.cards.map((c) => (
+            <div key={c.title} className="flex w-full items-center gap-[14px] rounded-[10px] bg-white p-[16px]">
+              <span className="text-[28px] leading-none" aria-hidden>{c.icon}</span>
+              <p className="text-left font-display text-[20px] font-bold leading-[1.18] text-black">{c.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Ideal para você */}
+      <section className="mx-auto flex w-full max-w-[480px] flex-col items-center px-[10px] pt-[35px] lg:max-w-[1000px]">
+        <h2 className="mb-[24px] max-w-[380px] text-center font-display text-[38px] font-semibold leading-[0.99] text-ink lg:max-w-[640px]">
+          {idealSection.title}
+        </h2>
+        <div className="grid w-full gap-[11px] lg:grid-cols-3">
+          {idealSection.items.map((item) => (
+            <div
+              key={item.title}
+              className="flex flex-col items-center gap-[10px] rounded-[10px] bg-[#dcfce7] p-[16px] text-center"
+            >
+              <RoundCheck />
+              <p className="font-display text-[20px] font-semibold leading-[1.1] text-black">{item.title}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* Projetos de alunas */}
