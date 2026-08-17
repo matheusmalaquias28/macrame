@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
-import { Gtm } from "@/components/Gtm";
 import { ThirdPartyScripts } from "@/components/ThirdPartyScripts";
 import { hero } from "@/lib/content";
 import "./globals.css";
@@ -68,13 +67,23 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${poppins.variable} ${manrope.variable} antialiased`}>
       <head>
         <link rel="preload" as="image" href="/macrame-hero.webp" type="image/webp" fetchPriority="high" />
+        {/* Google Tag Manager */}
+        <script src="/gtm.js" />
         {/* Pixel Utmify no HTML inicial — sem esperar hidratação do React */}
         <script src="/utmify-pixel.js" />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KW7LKQJ6"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
         <ThirdPartyScripts />
-        <Gtm />
         <Analytics />
       </body>
     </html>
