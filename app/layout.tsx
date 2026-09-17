@@ -71,6 +71,8 @@ export default function RootLayout({
         <script src="/gtm.js" />
         {/* Pixel Utmify no HTML inicial — sem esperar hidratação do React */}
         <script src="/utmify-pixel.js" />
+        {/* Cashflow tracking — no HTML inicial, sem atraso */}
+        <script src="/cashflow-pixel.js" />
       </head>
       <body>
         {/* Google Tag Manager (noscript) */}
